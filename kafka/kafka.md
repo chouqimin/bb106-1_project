@@ -7,6 +7,11 @@
   - `export JAVA_HOME=/../..`
   - `export PATH=$JAVA_HOME/bin:$PATH`
 
+### let 9092 port open 
+- `sudo ufw allow in 9092`
+
+
+
 
 ### start zookeeper server
 - 
