@@ -1,0 +1,20 @@
+version: '3'
+services:
+  bb106-mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: "test"
+      MYSQL_USER: "test"
+      MYSQL_PASSWORD: "test"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    container_name: bb106db
+  jupyter-tutorial:
+    image: jupyter/base-notebook
+    container_name: jupyter.local
+    ports:
+      - "8888:8888"
+      - "5000:5000"
+    command: start-notebook.sh --NotebookApp.token=''
